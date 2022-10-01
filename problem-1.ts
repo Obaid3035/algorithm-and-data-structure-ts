@@ -10,15 +10,20 @@ type frequencyCounter = { [key: number]: number}
 function same(arr1: number[], arr2: number[]): boolean {
     if (arr1.length !== arr2.length) return false;
 
-    const frequencyCounter: frequencyCounter = {}
-    for (const val of arr2) {
-        frequencyCounter[val] = (frequencyCounter[val] || 0) + 1;
-    }
+    const frequencyCounter1: frequencyCounter = {}
+    const frequencyCounter2: frequencyCounter = {}
 
     for (const val of arr1) {
-        if (!(val ** 2 in frequencyCounter)) return false;
-        if (frequencyCounter[val ** 2] === 0) return false;
-        frequencyCounter[val ** 2] -= 1;
+        frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1;
+    }
+
+    for (const val of arr2) {
+        frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1;
+    }
+
+    for (const key in frequencyCounter1) {
+        if (!(parseInt(key) ** 2 in frequencyCounter2)) return false;
+        if (frequencyCounter2[parseInt(key) ** 2] !== frequencyCounter1[key]) return false
     }
     return true;
 
