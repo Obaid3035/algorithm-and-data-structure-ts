@@ -1,6 +1,13 @@
 import {Types} from "./types";
 
 /**
+ ** Frequency Counter Pattern
+ ** This pattern uses objects or set to collect values/frequencies of values
+ ** this can often avoid nested looping or O(n^2)
+ **/
+
+
+/**
  ** Write a function same which accepts two array.
  ** The function should return true if every value in the first array has its corresponding value squared in the second array.
  ** The Frequency of values must be same
