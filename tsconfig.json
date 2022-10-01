@@ -3,7 +3,7 @@
     "target": "es6",
     "experimentalDecorators": true,
     "module": "commonjs",
-    "rootDir": "./src",
+    "rootDir": "./",
     "emitDeclarationOnly": false,
     "outDir": "./dist",
     "removeComments": true,

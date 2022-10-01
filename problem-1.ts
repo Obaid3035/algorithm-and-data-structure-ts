@@ -1,3 +1,4 @@
+import {Types} from "./types";
 
 /**
  ** Write a function same which accepts two array.
@@ -5,13 +6,12 @@
  ** The Frequency of values must be same
  **/
 
-type frequencyCounter = { [key: number]: number}
 
 function same(arr1: number[], arr2: number[]): boolean {
     if (arr1.length !== arr2.length) return false;
 
-    const frequencyCounter1: frequencyCounter = {}
-    const frequencyCounter2: frequencyCounter = {}
+    const frequencyCounter1: Types.frequencyCounter = {}
+    const frequencyCounter2: Types.frequencyCounter = {}
 
     for (const val of arr1) {
         frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1;
