@@ -1,4 +1,4 @@
-type ListType = number | string
+export type ListType = number | string
 
 class SinglyLinkedListNode<T> {
     val: T;
